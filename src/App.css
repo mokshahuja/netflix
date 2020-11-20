@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* background-color: #121212; */
+}
+
+.app {
+  /* display: flex; */
+  color: white;
+  height: 100%;
+  /* overflow: scroll; */
+}
+
+.app__searchBody {
+  padding-top: 60px;
+}
+
+
+.app__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: #121212;
+}
