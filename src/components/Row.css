@@ -1,9 +1,10 @@
 .row__movies {
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
     padding: 10px;
-    width: 100%;
+    /* flex-wrap: wrap;
+    flex-direction: row; */
 }
 
 .row__movies::-webkit-scrollbar {

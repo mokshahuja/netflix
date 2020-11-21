@@ -1,5 +1,6 @@
 import Axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Movie from "./Movie";
 import "./Row.css";
 
@@ -17,14 +18,25 @@ const Row = ({ title, id }) => {
       <div className="row__title">{title}</div>
       <div className="row__movies">
         {movies.map((movie) => (
-          <Movie
-            key={movie.id}
-            title={movie.title}
-            description={movie.overview}
-            imageUrl={`http://image.tmdb.org/t/p/original/${movie.poster_path}`}
-          />
+          <a href={`./${movie.id}`}>
+            <Movie
+              key={movie.id}
+              id={movie.id}
+              title={movie.title}
+              description={movie.overview}
+              imageUrl={`http://image.tmdb.org/t/p/original/${movie.poster_path}`}
+            />
+          </a>
         ))}
       </div>
+
+      {/* <Router>
+        {movies.map((movie) => (
+          <Route path exact = {`/${movie.id}`}>
+            <h1>Hello</h1>
+          </Route>
+        ))}
+      </Router> */}
     </div>
   );
 };

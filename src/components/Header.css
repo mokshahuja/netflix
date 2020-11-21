@@ -21,11 +21,14 @@
   border-bottom: 2px solid black;
   width: 400px;
   font-size: larger;
-  transition-timing-function: ease-in;
-  transition: all 1s;
   outline-width: 0;
   background: none;
   color: white;
+}
+
+.app__headerInput {
+  transition-timing-function: ease-in;
+  transition: all 1s;
 }
 
 .app__headerImage {
@@ -50,5 +53,5 @@
 
 .app__headerSearchIcon {
   border: none;
-  color:white;
+  color: white;
 }

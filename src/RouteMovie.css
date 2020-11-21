@@ -1,0 +1,50 @@
+.movieRouted_page {
+  margin-top: 60px;
+  display: flex;
+}
+
+.movieRouted__poster {
+  object-fit: contain;
+  width: 40vw;
+  max-height: 80vh;
+}
+
+.movieRouted__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 30px;
+}
+
+.movieRouted__descriptionName > h1 {
+  font-size: 4rem;
+}
+
+.movieRouted__descriptionRating {
+  font-size: 2rem;
+}
+
+.movieRouted__descriptionTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movieRouted__interests {
+  display: flex;
+  justify-content: space-between;
+}
+
+.movieRouted__genre {
+  font-size: 1.5rem;
+}
+
+.movieRouted__ImdbRating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movieRouted__overview {
+  font-size: 1.3rem;
+}

@@ -4,7 +4,7 @@ import { Button } from "@material-ui/core";
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 
 import "./Header.css";
-const Header = ({searchValue, setSearchvalue}) => {
+const Header = ({ searchValue, setSearchvalue }) => {
   const [isClicked, setClicked] = useState(false);
   const [show, setShow] = useState(false);
 
@@ -17,33 +17,41 @@ const Header = ({searchValue, setSearchvalue}) => {
       }
     });
     return () => {
-      window.removeEventListener("scroll",()=>{});
+      window.removeEventListener("scroll", () => {});
     };
   }, []);
 
   const handleInputChange = (e) => {
-    setSearchvalue(e.target.value)
-  
+    setSearchvalue(e.target.value);
   };
   console.log(searchValue);
 
   return (
     <div className={`app__header ${show && "app__headerBlack"}`}>
       <div>
-        <img
-          className="app__headerImage"
-          src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Logo_Netflix.png"
-          alt="Netflix"
-        />
+        <a href="/">
+          <img
+            className="app__headerImage"
+            src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+            alt="Netflix"
+          />
+        </a>
       </div>
 
       {isClicked && (
         <div className="app__headerInput">
-          <input className="app__headerSearch" placeholder="Search" value={searchValue} onChange={handleInputChange} />
-          <Button onClick={() => {
-            setClicked(false);
-            setSearchvalue('');
-            }}>
+          <input
+            className="app__headerSearch"
+            placeholder="Search"
+            value={searchValue}
+            onChange={handleInputChange}
+          />
+          <Button
+            onClick={() => {
+              setClicked(false);
+              setSearchvalue("");
+            }}
+          >
             <HighlightOffIcon color="secondary" />
           </Button>
         </div>
