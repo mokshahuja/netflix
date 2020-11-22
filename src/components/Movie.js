@@ -9,7 +9,7 @@ const Movie = ({ id, title, imageUrl }) => {
         className="movie__posters"
         src={imageUrl}
         alt={title}
-        onClick={`location.href = '/${id}';`}
+        // onClick={`location.href = '/${id}';`}
       />
     </a>
     // </div>

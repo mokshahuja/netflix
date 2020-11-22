@@ -8,7 +8,7 @@ const Banner = () => {
   useEffect(() => {
     async function fetchdata() {
       const bannerMovieRequest = await Axios.get(
-        "https://api.themoviedb.org/3/discover/tv?api_key=02e1cbd849b17d1d2c35dcffede49fa3&with_networks=213"
+        "https://api.themoviedb.org/3/discover/movie?api_key=02e1cbd849b17d1d2c35dcffede49fa3&language=en-US&sort_by=popularity.desc&with_genres=28"
       );
 
       let movieArray = bannerMovieRequest.data.results;
@@ -36,7 +36,15 @@ const Banner = () => {
       }}
     >
       <div className="banner__contents">
-        <h1>{bannerMovie?.name || "NO Game NO LIfe"}</h1>
+        <div>
+          <h1>{bannerMovie?.title || "NO Game NO LIfe"}</h1>
+        </div>
+        <div className="banner__buttons">
+          <button>
+            <a href={`/${bannerMovie.id}`}>Play</a>
+          </button>
+          <button>My List</button>
+        </div>
         <div className="banner__description">
           {bannerMovie !== null ? shorten(bannerMovie.overview, 200) : "..."}
         </div>

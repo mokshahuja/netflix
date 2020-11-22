@@ -9,7 +9,7 @@ const Row = ({ title, id }) => {
   useEffect(async () => {
     const url = `https://api.themoviedb.org/3/discover/movie?api_key=02e1cbd849b17d1d2c35dcffede49fa3&language=en-US&sort_by=popularity.desc&with_genres=${id}`;
     const promise = await Axios.get(url);
-    console.log("promise : ", promise.data.results);
+    // console.log("promise : ", promise.data.results);
     setMovies(promise.data.results);
   }, [id]);
 

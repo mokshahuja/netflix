@@ -38,6 +38,7 @@ const SearchResult = ({ searchValue }) => {
         <div className="movie__results">
           {movies.map((movie) => (
             <MovieResult
+              id = {movie.id}
               title={movie.title}
               ImageUrl={`http://image.tmdb.org/t/p/original/${movie.poster_path}`}
             />

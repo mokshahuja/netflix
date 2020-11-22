@@ -19,7 +19,7 @@ function App() {
         "https://api.themoviedb.org/3/genre/movie/list?api_key=02e1cbd849b17d1d2c35dcffede49fa3&language=en-US"
       );
 
-      console.log(promise.data.genres);
+      // console.log(promise.data.genres);
       setGenres(promise.data.genres);
     }
 
