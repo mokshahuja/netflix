@@ -11,14 +11,14 @@ const Row = ({ title, id }) => {
     const promise = await Axios.get(url);
     console.log("promise : ", promise.data.results);
     setMovies(promise.data.results);
-  }, []);
+  }, [id]);
 
   return (
     <div className="row">
       <div className="row__title">{title}</div>
       <div className="row__movies">
         {movies.map((movie) => (
-          <a href={`./${movie.id}`}>
+          // <a href={`./${movie.id}`}>
             <Movie
               key={movie.id}
               id={movie.id}
@@ -26,7 +26,7 @@ const Row = ({ title, id }) => {
               description={movie.overview}
               imageUrl={`http://image.tmdb.org/t/p/original/${movie.poster_path}`}
             />
-          </a>
+          // </a>
         ))}
       </div>
 

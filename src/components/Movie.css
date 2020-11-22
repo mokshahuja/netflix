@@ -1,6 +1,10 @@
+/* .movie__link a{
+  all: none;
+} */
+
 .movie__posters {
   object-fit: contain ;
-  width: 100%;
+  /* width: 100%; */
   max-height: 300px;
   margin-right: 10px;
   transition: transform 450ms;
@@ -8,12 +12,7 @@
 
 .movie__posters:hover {
   transform: scale(1.08);
+  opacity: 1;
   cursor: pointer;
 }
 
-.movie__link > a{
-  text-decoration: none;
-}
-.movie__link {
-  width:200px;
-}

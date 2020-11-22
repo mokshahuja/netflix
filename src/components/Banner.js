@@ -1,6 +1,6 @@
 import Axios from "axios";
 import React, { useEffect, useState } from "react";
-import './Banner.css'
+import "./Banner.css";
 
 const Banner = () => {
   const [bannerMovie, setBannerMovie] = useState([]);
@@ -22,22 +22,23 @@ const Banner = () => {
   }, []);
   console.log("BannerMovie 2 : ", bannerMovie);
 
-  function shorten(str,len) {
-    return str?.length > len? str.substr(0,len)+"..." : str;
+  function shorten(str, len) {
+    return str?.length > len ? str.substr(0, len) + "..." : str;
   }
 
-  
-
   return (
-    <div className="banner" style={{
-      backgroundSize: "cover",
-      backgroundImage: `url("http://image.tmdb.org/t/p/original${bannerMovie?.backdrop_path}")`,
-      backgroundPosition: "center center"
-    }} >
+    <div
+      className="banner"
+      style={{
+        backgroundSize: "cover",
+        backgroundImage: `url("http://image.tmdb.org/t/p/original${bannerMovie?.backdrop_path}")`,
+        backgroundPosition: "center center",
+      }}
+    >
       <div className="banner__contents">
         <h1>{bannerMovie?.name || "NO Game NO LIfe"}</h1>
         <div className="banner__description">
-            {bannerMovie !== null ? shorten(bannerMovie.overview,200) : '...'}
+          {bannerMovie !== null ? shorten(bannerMovie.overview, 200) : "..."}
         </div>
       </div>
     </div>

@@ -1,16 +1,18 @@
 import React from "react";
 import "./Movie.css";
 
-const Movie = ({ id, title, description, imageUrl }) => {
-  description =
-    description.length > 5 ? description.substring(0, 17) + "..." : description;
-
+const Movie = ({ id, title, imageUrl }) => {
   return (
     // <div className="movie__link">
-    //   {/* <a href={`/${id}`}> */}
-        <img className="movie__posters" src={imageUrl} alt={title} />
-    //    {/* </a> */}
-    //  </div>
+    <a href={`/${id}`}>
+      <img
+        className="movie__posters"
+        src={imageUrl}
+        alt={title}
+        onClick={`location.href = '/${id}';`}
+      />
+    </a>
+    // </div>
   );
 };
 

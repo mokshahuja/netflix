@@ -3,8 +3,6 @@
     overflow-x: scroll;
     overflow-y: hidden;
     padding: 10px;
-    /* flex-wrap: wrap;
-    flex-direction: row; */
 }
 
 .row__movies::-webkit-scrollbar {

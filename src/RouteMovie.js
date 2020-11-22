@@ -17,7 +17,7 @@ const RouteMovie = () => {
     }
     fetchdata();
     console.log("------->>>>>>>>>>>>", movieRouted);
-  }, []);
+  }, [id]);
 
   movieRouted.genres?.forEach((element) => {
     s += element.name + ",";

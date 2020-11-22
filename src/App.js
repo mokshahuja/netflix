@@ -5,12 +5,8 @@ import Axios from "axios";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import SearchResult from "./components/SearchResult";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
-import RouteMovie from './RouteMovie.js';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import RouteMovie from "./RouteMovie.js";
 // import { useState } from "react";
 
 function App() {
@@ -56,9 +52,9 @@ function App() {
               </div>
             )}
           </Route>
-        <Route path = "/:id">
-          <RouteMovie />
-        </Route>
+          <Route path="/:id">
+            <RouteMovie />
+          </Route>
         </Switch>
       </Router>
     </div>
